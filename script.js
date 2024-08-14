@@ -39,15 +39,21 @@ function generateSlide(product) {
         <li class="splide__slide flex items-center">
             <div class="flex w-full md:w-1/2 p-8" style="background-color: ${product.ambientColor};">
                 <div class="text-left flex flex-col justify-center w-full">
-                    <h2 class="text-2xl md:text-4xl font-bold text-amber-50">${product.title}</h2>
-                    <p class=" md:text-xl  text-5xl mt-2 text-black">${product.subtitle}</p>
+                    <h2 class="text-2xl md:text-5xl text-white font-bold text-amber-50">${product.title}</h2>
+                    <p class="md:text-2xl font-bold text-5xl mt-2 text-black">${product.subtitle}</p>
                     <p class="mt-4 text-black">${product.description}</p>
-                    <p class="mt-4 text-xl md:text-3xl font-semibold text-amber-50">${product.price}</p>
+                    <p class="mt-4 text-xl md:text-4xl text-white font-semibold text-amber-50">${product.price}</p>
+                    <!-- Social media icons for each slide -->
+                    <div class="flex space-x-8 mt-4">
+                        <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             
-            <div class="w-full md:w-1/2 flex justify-center">
-                <img src="${product.image}" alt="${product.title}" class="max-w-full h-auto">
-            </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="${product.image}" alt="${product.title}" class="max-w-full h-auto">
+                </div>
             </div>
         </li>
     `;
@@ -71,7 +77,13 @@ function loadProducts() {
     // Initialize Splide and assign to the splide variable
     splide = new Splide('.splide', {
         perPage: 1,
-        autoplay: true,
+        perMove: 1,
+        autoplay: false,
+        interval: 5000,
+        pauseOnHover: true,
+        easing: 'linear',
+        arrows: true,
+        pagination: false,
     }).mount();
 
     splide.on('moved', (newIndex) => {

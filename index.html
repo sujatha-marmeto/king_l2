@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="p-8 flex justify-between items-center header-nav">
-        <div class="text-2xl font-bold">King</div>
-        <nav class="flex space-x-6">
+        <div class="text-2xl font-bold flex items-center">
+            <!-- Icon before the King logo -->
+            <i class="fas fa-crown text-3xl mr-2"></i>
+            King
+        </div>
+        <nav class="flex space-x-20" style="margin-left: 600px;">
             <a href="#" class="hover:text-gray-600">Shop</a>
             <a href="#" class="hover:text-gray-600">Brands</a>
             <a href="#" class="hover:text-gray-600">Contact Us</a>
         </nav>
-        <button class="px-4 py-2 bg-black text-white rounded">Sign Up</button>
+        <button class="px-4 py-2 bg-black text-white rounded-full">Sign Up</button>
     </header>
     
     <!-- Carousel Section -->
@@ -27,7 +32,6 @@
             </ul>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./script.js"></script>
 </body>
