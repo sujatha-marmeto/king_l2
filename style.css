@@ -60,10 +60,6 @@
 
 .social-icon.facebook {
     color: #f3f4f7; 
-    border-radius: 50%;
-    border: solid;
-    width: 30px;
-    height: 50px;
 }
 
 .social-icon.twitter {
@@ -72,4 +68,8 @@
 
 .social-icon.youtube {
     color: #f3f1f1; 
+}
+.splide__slide img {
+    vertical-align: bottom;
+    height: 600px;
 }
