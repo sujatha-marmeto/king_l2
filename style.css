@@ -8,28 +8,6 @@
 .splide__arrow--next {
     right: 4em;
 }
-
-@media (min-width: 768px) {
-    .md\:w-1\/2 {
-      width: 100%;
-    }
-  
-    .md\:text-3xl {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-  
-    .md\:text-4xl {
-      font-size: 2.25rem;
-      line-height: 2.5rem;
-    }
-  
-    .md\:text-xl {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-    }
-  }
-
   .splide__arrow {
     -ms-flex-align: center;
     align-items: center;
@@ -73,4 +51,142 @@
     vertical-align: bottom;
     height: 550px;
 
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: baseline;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu a, .nav-menu button {
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .splide__arrow--prev {
+    left: 31em;
+}
+
+.md\:w-1\/2 {
+  width: 100%;
+}
+
+.md\:text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.md\:text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.md\:text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.nav-menu {
+ 
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 350px;
+  height: 60%;
+  background: #25242452;
+  border-left: 1px solid #e5e7eb;
+  z-index: 10;
+  padding: 60px 0 0 0;
+}
+
+.nav-menu.active {
+    transform: translateX(-100%);
+
+}
+.menu-toggle {
+    display: block;
+}
+
+header {
+    padding: 1rem;
+}
+
+.splide__arrow--next {
+  right: 2em;
+}
+
+.splide__slide img {
+vertical-align: bottom;
+height: 500px;
+margin-top: 1rem;
+margin-bottom: 4rem;
+}
+}
+
+@media (max-width: 768px) {
+  .md\:w-1\/2 {
+    width: 100%;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 100%;
+    background: #25242452;
+    border-left: 1px solid #e5e7eb;
+    z-index: 10;
+    padding: 60px 0 0 0;
+  }
+
+  .nav-menu.active {
+      transform: translateX(-100%);
+  
+  }
+  .menu-toggle {
+      display: block;
+  }
+
+  header {
+      padding: 1rem;
+  }
+  .splide__arrow--next {
+    right: 0.5em;
+}
+.splide__arrow--prev {
+  left: 11em;
+}
+.splide__slide img {
+  vertical-align: bottom;
+  height: 500px;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
 }

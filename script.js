@@ -25,7 +25,7 @@ const products = [
     },
     {
         "title": "Refined Timepieces",
-        "subtitle": "Choose Us for Elegance",
+        "subtitle": "Elegance, choose Us",
         "description": "Explore the Latest Watches with a Perfect Blend of Style, Functionality, and Sophistication.",
         "price": "$599.00",
         "image": "https://week2-l2-soln.vercel.app/images/watch4.png",
@@ -39,7 +39,7 @@ function generateSlide(product) {
     return `
         <li class="splide__slide flex items-center">
             <div class="flex w-full md:w-1/2 p-8" style="background-color: ${product.ambientColor};">
-                <div class="text-left flex flex-col justify-center w-full">
+                <div class="text-left  gap-3 flex flex-col justify-center w-full">
                     <h2 class="text-2xl md:text-5xl text-white font-bold text-amber-50">${product.title}</h2>
                     <p class="md:text-2xl font-bold text-5xl mt-2 text-black">${product.subtitle}</p>
                     <p class="mt-4 text-black">${product.description}</p>
@@ -117,4 +117,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     slider.refresh(); 
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('nav-menu');
+        menu.classList.toggle('active');
+    });
 });
